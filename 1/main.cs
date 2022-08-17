@@ -1,6 +1,6 @@
 using System;
 
-class Program {
+class Aula1 {
 
 // Função
   public static double f(double x, double a, double b, double c) {
@@ -21,6 +21,8 @@ class Program {
     }
     return r;
   }
+
+  // Main
   
   public static void Main (string[] args) {
     int v = 0;
@@ -31,7 +33,7 @@ class Program {
     Console.WriteLine(s[0] + " " + s[1]);
     double[] t = zero(1, 4, 2);
     Console.WriteLine(t[0] + " " + t[1]);
-  
+
   int[,] m = new int[2,3]{
     {1,2,3}, 
     {4,5,6}
@@ -43,4 +45,3 @@ class Program {
 }
 
 }
-
