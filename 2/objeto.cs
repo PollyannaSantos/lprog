@@ -5,24 +5,22 @@ class AulaObjeto {
 
   public static void Imprimir(Aluno aluno, Disciplina disciplina) {
   if(aluno.Matricular(disciplina)) {
-  Console.WriteLine(aluno.matricula);
+  Console.WriteLine(aluno.Matricula);
     }
   }
 
 public static void Main (string[] args) {
   Aluno aluno1 = new Aluno {
-      matricula = "012022",
-      periodo = 1
+      Matricula = "012022",
     };
     
     Aluno aluno2 = new Aluno {
-      matricula = "022022",
-      periodo = 3
+      Matricula = "022022",
     };
 
   Disciplina disciplina = new Disciplina {
-    nome = "Linguagem de Programação",
-    semestre = 3
+    Nome = "Linguagem de Programação",
+    Semestre = 3
     };
   
   Imprimir(aluno1, disciplina);
