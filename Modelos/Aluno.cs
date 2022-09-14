@@ -1,7 +1,7 @@
 //Uma class pode ter métodos
 
 namespace Modelos {
-  class Aluno {
+  class Aluno : Pessoa {
     //Nunca declarar um atributo público
     private string matricula;
     // private string nome;
@@ -13,10 +13,6 @@ namespace Modelos {
     public string Matricula {
       get => this.matricula;
       set => matricula = value;
-    }
-
-    public string Nome {
-      get; set;
     }
     
     public int Periodo {

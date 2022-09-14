@@ -1,8 +1,10 @@
 namespace Modelos {
   class Disciplina {
-    private string nome;
     private int semestre;
 
+   public string Nome {
+    get; set;  }
+    
     public int Semestre {
     get => this.semestre;
     set {
@@ -15,10 +17,6 @@ namespace Modelos {
       }
     }
    }
-
-     public string Nome {
-    get; set;
-  }
 
   public Disciplina() : this(1) {
   }
