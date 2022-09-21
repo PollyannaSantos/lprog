@@ -50,5 +50,10 @@ namespace Modelos {
         this.Matricula = matricula;
         this.Nome = nome;
         }
+
+    public override bool Validar() {
+      return this.Matricula != null && this.Matricula.Length > 0;
+    }
+      
   }
 }

@@ -1,43 +1,65 @@
 using System;
 
 namespace Modelos {
+
+//  Para evitar a repetição de nome, CPF, etc. foi criado o Imprimir(Object obj).
   
   class Impressora {
-    
-    public static void print(Pessoa pessoa) {
-    Console.WriteLine(
-     "-------------------------------------------------------\n" +
-     "Nome: " + pessoa.Nome + "\n" + "CPF:" + pessoa.Cpf + "\n" +
-      "-------------------------------------------------------"
-    );
 
-  } 
-    public static void print(Professor professor) {
+    public static void print(Object obj) {
+    Console.WriteLine("-------------------------------------------------------");
+      
+    if (obj is Pessoa) {
+      print((Pessoa) obj);
+    }
+    if (obj is Professor) {
+      print((Professor) obj);
+    }
+    if (obj is Aluno) {
+   print((Aluno) obj);
+    }
+    if (obj is Disciplina) {
+   print((Disciplina) obj);
+    }
+    if (obj is Contato) {
+   print((Contato) obj);
+    }
+      
+    Console.WriteLine("-------------------------------------------------------");
+    }
+    
+    private static void print(Pessoa pessoa) {
     Console.WriteLine(
-     "-------------------------------------------------------\n" +
-     "Nome: " + professor.Nome + "\n" + "CPF:" + professor.Cpf + "\n" + "Código: " + professor.Codigo +
-      "-------------------------------------------------------"
+     "Nome: " + pessoa.Nome + "\n" + "CPF:" + pessoa.Cpf
     );
-
   } 
     
-    public static void print(Aluno aluno) {
+    private static void print(Professor professor) {
     Console.WriteLine(
-     "-------------------------------------------------------\n" +
-      "Matricula: " + aluno.Matricula + "\n"
-     + "Nome: " + aluno.Nome + "\n" + "CPF:" + aluno.Cpf + "\n" + 
-     "Periodo: " + aluno.Periodo + "\n" + "Semestre: " +      "\n" +
-      "-------------------------------------------------------"
+    "Código: " + professor.Codigo
+    );
+  } 
+    
+    private static void print(Aluno aluno) {
+    Console.WriteLine(
+     "Matricula: " + aluno.Matricula + "\n" +  "Periodo: " + aluno.Periodo
     );
   }
-  public static void print(Disciplina disciplina) {
+    
+    private static void print(Disciplina disciplina) {
     Console.WriteLine(
-      "-------------------------------------------------------\n" + "Nome: " +
+    "Nome: " +
       disciplina.Nome + "\n" + "Semestre: " 
-      + disciplina.Semestre + "\n" +
-      "-------------------------------------------------------"
+      + disciplina.Semestre
     );
   }
+
+    private static void print(Contato contato) {
+    Console.WriteLine(
+    contato.Informar()
+    );
+  } 
+    
  }
 
 }
