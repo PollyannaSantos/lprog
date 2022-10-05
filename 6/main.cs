@@ -11,22 +11,22 @@ class Aula6 {
     Impressora.print(aluno2);
     
     Pessoa pessoa1 = new Professor();
-    //pessoa1.Cpf = "588.401.710-37";
+    pessoa1.Cpf = "588.401.710-37";
     //Impressora.print(pessoa1);
     Pessoa pessoa2 = (Pessoa) aluno2;
     Impressora.print(pessoa2);
     
     Aluno aluno3 = (Aluno) pessoa2;
-    Impressora.print(aluno3);
+    //Impressora.print(aluno3);
     Professor professor1 = new Professor();
     professor1.Cpf = "851.152.090-20";
-    Impressora.print(professor1);
+    //Impressora.print(professor1);
 
     Familiar familiar1 = new Familiar();
     familiar1.Nome = "Rafaela Shimidth";
     familiar1.Cpf = "446.637.010-94";
     familiar1.Parentesco = "Mãe";
-    Impressora.print(familiar1);
+    //Impressora.print(familiar1);
     
   }
 

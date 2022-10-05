@@ -24,8 +24,8 @@ public static void Main (string[] args) {
   Impressora.print(aluno4);
   Aluno aluno5 = new Aluno("2020ENEL789", "João", 3);
   Impressora.print(aluno5); 
-  Impressora.print(disciplina1); 
-  Impressora.print(disciplina2); 
+  //Impressora.print(disciplina1); 
+  //Impressora.print(disciplina2); 
     
   }
 }
