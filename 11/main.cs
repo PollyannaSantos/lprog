@@ -1,3 +1,4 @@
+using System;
 using Modelos;
 
 class Aula11 {
@@ -15,7 +16,26 @@ fisica.Prerequisito = calculo;
   Matricula matricula1 = aluno1.Cursar(engenharia);
   matricula1.Ano = 2022;
   matricula1.Semestre = 2;
-  matricula1.Codigo = "2022EN0001";
+  matricula1.Codigo = "20212enel0390";
+  Turma turma1 = new Turma();
+  turma1.Ano = 2022;
+  turma1.Semestre = 2;
+  Historico historico1 = new Historico();
+  historico1.Matricula = matricula1;
+  historico1.Turma = turma1;
+  Console.WriteLine(historico1.Resultado.Media());
+  Console.WriteLine(historico1.Resultado.Aprovado());
+  historico1.Faltas = 0.8f;
+  Nota nota1 = new Nota();
+  nota1.Valor = 8.0f;
+  historico1.Notas.Add(nota1);
+  Nota nota2 = new Nota();
+  nota2.Valor = 10.0f;
+  historico1.Notas.Add(nota2);
+  Console.WriteLine(historico1.Resultado.Media());
+  Console.WriteLine(historico1.Resultado.Aprovado());
+  
+  
   
   }
   
